@@ -9,10 +9,10 @@ Imports System.Runtime.InteropServices
 ' Review the values of the assembly attributes
 
 <Assembly: AssemblyTitle("Utility Launcher")>
-<Assembly: AssemblyDescription("")>
-<Assembly: AssemblyCompany("")>
+<Assembly: AssemblyDescription("Launches Various Utilities. " & vbNewLine & "Written by Stephen Johnson")>
+<Assembly: AssemblyCompany("Probity Advisors")>
 <Assembly: AssemblyProduct("Utility Launcher")>
-<Assembly: AssemblyCopyright("Copyright ©  2016")>
+<Assembly: AssemblyCopyright("Copyright ©  Probity Advisors - 2016")>
 <Assembly: AssemblyTrademark("")>
 
 <Assembly: ComVisible(False)>

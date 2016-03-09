@@ -22,6 +22,8 @@ Partial Class frmMain
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMain))
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.tabutilities = New System.Windows.Forms.TabPage()
         Me.tabConfiguration = New System.Windows.Forms.TabPage()
@@ -43,20 +45,42 @@ Partial Class frmMain
         Me.cboUtilities = New System.Windows.Forms.ComboBox()
         Me.lblUtility = New System.Windows.Forms.Label()
         Me.dlgColor = New System.Windows.Forms.ColorDialog()
+        Me.icnLaunch = New System.Windows.Forms.NotifyIcon(Me.components)
+        Me.mnuLauncher = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.mnuLaunch = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mnuConfigure = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mnuShow = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mnuAbout = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.mnuExit = New System.Windows.Forms.ToolStripMenuItem()
+        Me.tmrAbout = New System.Windows.Forms.Timer(Me.components)
+        Me.mnuMain = New System.Windows.Forms.MenuStrip()
+        Me.mnuFile = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mnuFileExit = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mnuOptions = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mnuStartOnLogon = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mnuRunInSystem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mnuHelp = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mnuHelpAbout = New System.Windows.Forms.ToolStripMenuItem()
         Me.TabControl1.SuspendLayout()
         Me.tabConfiguration.SuspendLayout()
         Me.grtpDetails.SuspendLayout()
+        Me.mnuLauncher.SuspendLayout()
+        Me.mnuMain.SuspendLayout()
         Me.SuspendLayout()
         '
         'TabControl1
         '
+        Me.TabControl1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TabControl1.Controls.Add(Me.tabutilities)
         Me.TabControl1.Controls.Add(Me.tabConfiguration)
-        Me.TabControl1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TabControl1.Location = New System.Drawing.Point(0, 0)
+        Me.TabControl1.Location = New System.Drawing.Point(0, 27)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(968, 335)
+        Me.TabControl1.Size = New System.Drawing.Size(956, 285)
         Me.TabControl1.TabIndex = 0
         '
         'tabutilities
@@ -64,7 +88,7 @@ Partial Class frmMain
         Me.tabutilities.Location = New System.Drawing.Point(4, 22)
         Me.tabutilities.Name = "tabutilities"
         Me.tabutilities.Padding = New System.Windows.Forms.Padding(3)
-        Me.tabutilities.Size = New System.Drawing.Size(960, 309)
+        Me.tabutilities.Size = New System.Drawing.Size(948, 259)
         Me.tabutilities.TabIndex = 0
         Me.tabutilities.Text = "Utilities"
         Me.tabutilities.UseVisualStyleBackColor = True
@@ -80,7 +104,7 @@ Partial Class frmMain
         Me.tabConfiguration.Location = New System.Drawing.Point(4, 22)
         Me.tabConfiguration.Name = "tabConfiguration"
         Me.tabConfiguration.Padding = New System.Windows.Forms.Padding(3)
-        Me.tabConfiguration.Size = New System.Drawing.Size(960, 309)
+        Me.tabConfiguration.Size = New System.Drawing.Size(948, 259)
         Me.tabConfiguration.TabIndex = 1
         Me.tabConfiguration.Text = "Configuration"
         Me.tabConfiguration.UseVisualStyleBackColor = True
@@ -88,7 +112,7 @@ Partial Class frmMain
         'btnDelete
         '
         Me.btnDelete.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnDelete.Location = New System.Drawing.Point(860, 268)
+        Me.btnDelete.Location = New System.Drawing.Point(848, 218)
         Me.btnDelete.Name = "btnDelete"
         Me.btnDelete.Size = New System.Drawing.Size(75, 23)
         Me.btnDelete.TabIndex = 5
@@ -99,7 +123,7 @@ Partial Class frmMain
         'btnUpdate
         '
         Me.btnUpdate.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnUpdate.Location = New System.Drawing.Point(765, 268)
+        Me.btnUpdate.Location = New System.Drawing.Point(753, 218)
         Me.btnUpdate.Name = "btnUpdate"
         Me.btnUpdate.Size = New System.Drawing.Size(75, 23)
         Me.btnUpdate.TabIndex = 4
@@ -248,19 +272,140 @@ Partial Class frmMain
         Me.lblUtility.Text = "Utility"
         Me.lblUtility.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
+        'icnLaunch
+        '
+        Me.icnLaunch.ContextMenuStrip = Me.mnuLauncher
+        Me.icnLaunch.Icon = CType(resources.GetObject("icnLaunch.Icon"), System.Drawing.Icon)
+        Me.icnLaunch.Text = "Utilities Launcher"
+        '
+        'mnuLauncher
+        '
+        Me.mnuLauncher.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuLaunch, Me.mnuConfigure, Me.mnuShow, Me.mnuAbout, Me.ToolStripSeparator1, Me.mnuExit})
+        Me.mnuLauncher.Name = "mnuLauncher"
+        Me.mnuLauncher.Size = New System.Drawing.Size(140, 120)
+        '
+        'mnuLaunch
+        '
+        Me.mnuLaunch.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem1})
+        Me.mnuLaunch.Name = "mnuLaunch"
+        Me.mnuLaunch.Size = New System.Drawing.Size(139, 22)
+        Me.mnuLaunch.Text = "Launch"
+        '
+        'ToolStripMenuItem1
+        '
+        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(134, 22)
+        Me.ToolStripMenuItem1.Text = "mnuLaunch1"
+        '
+        'mnuConfigure
+        '
+        Me.mnuConfigure.Name = "mnuConfigure"
+        Me.mnuConfigure.Size = New System.Drawing.Size(139, 22)
+        Me.mnuConfigure.Text = "Configure"
+        '
+        'mnuShow
+        '
+        Me.mnuShow.Name = "mnuShow"
+        Me.mnuShow.Size = New System.Drawing.Size(139, 22)
+        Me.mnuShow.Text = "Show"
+        '
+        'mnuAbout
+        '
+        Me.mnuAbout.Name = "mnuAbout"
+        Me.mnuAbout.Size = New System.Drawing.Size(139, 22)
+        Me.mnuAbout.Text = "About"
+        '
+        'ToolStripSeparator1
+        '
+        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(136, 6)
+        '
+        'mnuExit
+        '
+        Me.mnuExit.Name = "mnuExit"
+        Me.mnuExit.Size = New System.Drawing.Size(139, 22)
+        Me.mnuExit.Text = "Exit Launcher"
+        '
+        'tmrAbout
+        '
+        Me.tmrAbout.Interval = 5000
+        '
+        'mnuMain
+        '
+        Me.mnuMain.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuFile, Me.mnuOptions, Me.mnuHelp})
+        Me.mnuMain.Location = New System.Drawing.Point(0, 0)
+        Me.mnuMain.Name = "mnuMain"
+        Me.mnuMain.Size = New System.Drawing.Size(968, 24)
+        Me.mnuMain.TabIndex = 1
+        Me.mnuMain.Text = "MenuStrip1"
+        '
+        'mnuFile
+        '
+        Me.mnuFile.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuFileExit})
+        Me.mnuFile.Name = "mnuFile"
+        Me.mnuFile.Size = New System.Drawing.Size(35, 20)
+        Me.mnuFile.Text = "File"
+        '
+        'mnuFileExit
+        '
+        Me.mnuFileExit.Name = "mnuFileExit"
+        Me.mnuFileExit.Size = New System.Drawing.Size(92, 22)
+        Me.mnuFileExit.Text = "Exit"
+        '
+        'mnuOptions
+        '
+        Me.mnuOptions.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuStartOnLogon, Me.mnuRunInSystem})
+        Me.mnuOptions.Name = "mnuOptions"
+        Me.mnuOptions.Size = New System.Drawing.Size(56, 20)
+        Me.mnuOptions.Text = "Options"
+        '
+        'mnuStartOnLogon
+        '
+        Me.mnuStartOnLogon.Name = "mnuStartOnLogon"
+        Me.mnuStartOnLogon.Size = New System.Drawing.Size(167, 22)
+        Me.mnuStartOnLogon.Text = "Start on Logon"
+        Me.mnuStartOnLogon.Visible = False
+        '
+        'mnuRunInSystem
+        '
+        Me.mnuRunInSystem.Name = "mnuRunInSystem"
+        Me.mnuRunInSystem.Size = New System.Drawing.Size(167, 22)
+        Me.mnuRunInSystem.Text = "Run in System Tray"
+        '
+        'mnuHelp
+        '
+        Me.mnuHelp.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuHelpAbout})
+        Me.mnuHelp.Name = "mnuHelp"
+        Me.mnuHelp.Size = New System.Drawing.Size(40, 20)
+        Me.mnuHelp.Text = "Help"
+        '
+        'mnuHelpAbout
+        '
+        Me.mnuHelpAbout.Name = "mnuHelpAbout"
+        Me.mnuHelpAbout.Size = New System.Drawing.Size(103, 22)
+        Me.mnuHelpAbout.Text = "About"
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(968, 335)
+        Me.Controls.Add(Me.mnuMain)
         Me.Controls.Add(Me.TabControl1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MainMenuStrip = Me.mnuMain
         Me.Name = "frmMain"
         Me.Text = "Form1"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.TabControl1.ResumeLayout(False)
         Me.tabConfiguration.ResumeLayout(False)
         Me.grtpDetails.ResumeLayout(False)
         Me.grtpDetails.PerformLayout()
+        Me.mnuLauncher.ResumeLayout(False)
+        Me.mnuMain.ResumeLayout(False)
+        Me.mnuMain.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -285,4 +430,22 @@ Partial Class frmMain
     Friend WithEvents dlgColor As ColorDialog
     Friend WithEvents txtDisplayName As TextBox
     Friend WithEvents lblDisplayName As Label
+    Friend WithEvents icnLaunch As NotifyIcon
+    Friend WithEvents mnuLauncher As ContextMenuStrip
+    Friend WithEvents mnuLaunch As ToolStripMenuItem
+    Friend WithEvents mnuConfigure As ToolStripMenuItem
+    Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
+    Friend WithEvents mnuExit As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents mnuAbout As ToolStripMenuItem
+    Friend WithEvents tmrAbout As Timer
+    Friend WithEvents mnuMain As MenuStrip
+    Friend WithEvents mnuFile As ToolStripMenuItem
+    Friend WithEvents mnuFileExit As ToolStripMenuItem
+    Friend WithEvents mnuOptions As ToolStripMenuItem
+    Friend WithEvents mnuStartOnLogon As ToolStripMenuItem
+    Friend WithEvents mnuRunInSystem As ToolStripMenuItem
+    Friend WithEvents mnuHelp As ToolStripMenuItem
+    Friend WithEvents mnuHelpAbout As ToolStripMenuItem
+    Friend WithEvents mnuShow As ToolStripMenuItem
 End Class

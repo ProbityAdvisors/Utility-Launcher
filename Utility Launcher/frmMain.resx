@@ -120,7 +120,54 @@
   <metadata name="dlgColor.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>25</value>
+  <metadata name="icnLaunch.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>109, 5</value>
   </metadata>
+  <metadata name="mnuLauncher.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>224, 11</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="icnLaunch.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAICAQAAAAAADoAgAAFgAAACgAAAAgAAAAQAAAAAEABAAAAAAAgAIAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAACAAACAAAAAgIAAgAAAAIAAgACAgAAAwMDAAICAgAAAAP8AAP8AAAD//wD/AAAA/wD/AP//
+        AAD///8A////////////////////////////+f///////////////////5n///////////////////+Z
+        n/////////////v////5Ip/////////////7u7//+SKf/////////////7uZv5kimf/////////////7
+        mZuyIin//////////////7mZtyIp///////////////7kAByKf//////////////+bCIdymf////////
+        /////5lwiId3n////////////5mSd4iIh3///////////5mSIid4iIh3//////////+ZIiIid4iIh3f/
+        ////////+ZmSIid4iIiHf///////////mZkid3iIiHd////////////5mZl3iIiId///////////////
+        93iIiId3//////////////93iIiIh3//////////////93iIiId5//////////////93iIiHWZ//////
+        ////////93iId1Wf//////////////93h3VVmf//////////////93dVVVn///////////////+ZlVVZ
+        n/////////////////mZlZ///////////////////5mZ////////////////////////////////////
+        //////////////////////////////////////////////////8AAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
+</value>
+  </data>
+  <metadata name="tmrAbout.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>343, 11</value>
+  </metadata>
+  <metadata name="mnuMain.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>441, 11</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>52</value>
+  </metadata>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAICAQAAAAAADoAgAAFgAAACgAAAAgAAAAQAAAAAEABAAAAAAAgAIAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAACAAACAAAAAgIAAgAAAAIAAgACAgAAAwMDAAICAgAAAAP8AAP8AAAD//wD/AAAA/wD/AP//
+        AAD///8A////////////////////////////+f///////////////////5n///////////////////+Z
+        n/////////////v////5Ip/////////////7u7//+SKf/////////////7uZv5kimf/////////////7
+        mZuyIin//////////////7mZtyIp///////////////7kAByKf//////////////+bCIdymf////////
+        /////5lwiId3n////////////5mSd4iIh3///////////5mSIid4iIh3//////////+ZIiIid4iIh3f/
+        ////////+ZmSIid4iIiHf///////////mZkid3iIiHd////////////5mZl3iIiId///////////////
+        93iIiId3//////////////93iIiIh3//////////////93iIiId5//////////////93iIiHWZ//////
+        ////////93iId1Wf//////////////93h3VVmf//////////////93dVVVn///////////////+ZlVVZ
+        n/////////////////mZlZ///////////////////5mZ////////////////////////////////////
+        //////////////////////////////////////////////////8AAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
+</value>
+  </data>
 </root>
